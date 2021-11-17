@@ -12,4 +12,4 @@ jobs:
       - name: Run a one-line script
         run: mvn package
       - name: tomcat deploy
-        run: curl -v -u ${{ secrets.TOMCAT_USER_NAME }}:${{ secrets.TOMCAT_PASSWORD }} -T /home/ec2-user/actions-runner/_work/spring3-mvc-maven-xml-hello-world/spring3-mvc-maven-xml-hello-world/target/spring3-mvc-maven-xml-hello-world-1.2.war 'http://ec2-54-87-53-68.compute-1.amazonaws.com:8080/manager/text/deploy?path=/github_deploy&update=true'
+        run: curl -v -u ${{ secrets.TOMCAT_USER_NAME }}:${{ secrets.TOMCAT_PASSWORD }} -T /home/ec2-user/actions-runner/_work/spring3-mvc-maven-xml-hello-world/spring3-mvc-maven-xml-hello-world/target/spring3-mvc-maven-xml-hello-world-1.2.war 'http://54.87.53.68:8080/manager/text/deploy?path=/github_deploy&update=true'
